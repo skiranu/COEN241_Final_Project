@@ -1,0 +1,49 @@
+{
+    "_metadata": {
+        "major_version": 1,
+        "minor_version": 1
+    },
+    "display_information": {
+        "name": "Chatbot_SCU",
+        "description": "Santa Clara University Chatbot",
+        "background_color": "#1d3275"
+    },
+    "features": {
+        "app_home": {
+            "home_tab_enabled": true,
+            "messages_tab_enabled": false,
+            "messages_tab_read_only_enabled": false
+        },
+        "bot_user": {
+            "display_name": "Chatbot_SCU",
+            "always_online": true
+        }
+    },
+    "oauth_config": {
+        "redirect_urls": [
+            "https://channels.lex.us-east-1.amazonaws.com/slack/oauth/ab588b50-4c0c-4051-9321-dda9ebe3ad32"
+        ],
+        "scopes": {
+            "bot": [
+                "chat:write",
+                "team:read",
+                "im:history"
+            ]
+        }
+    },
+    "settings": {
+        "event_subscriptions": {
+            "request_url": "https://channels.lex.us-east-1.amazonaws.com/slack/webhook/ab588b50-4c0c-4051-9321-dda9ebe3ad32",
+            "bot_events": [
+                "message.im"
+            ]
+        },
+        "interactivity": {
+            "is_enabled": true,
+            "request_url": "https://channels.lex.us-east-1.amazonaws.com/slack/webhook/ab588b50-4c0c-4051-9321-dda9ebe3ad32"
+        },
+        "org_deploy_enabled": false,
+        "socket_mode_enabled": false,
+        "token_rotation_enabled": false
+    }
+}
