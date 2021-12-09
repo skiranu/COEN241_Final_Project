@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "Greetings",
+    "version": "6",
+    "fulfillmentActivity": {
+      "type": "ReturnIntent"
+    },
+    "sampleUtterances": [
+      "Hi",
+      "Hello",
+      "Hey",
+      "hey there"
+    ],
+    "slots": [
+      {
+        "sampleUtterances": [],
+        "slotType": "AMAZON.US_FIRST_NAME",
+        "obfuscationSetting": "NONE",
+        "slotConstraint": "Required",
+        "valueElicitationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Hello! Welcome to Santa Clara University. Who do I have the pleasure of speaking with?"
+            }
+          ],
+          "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\"}",
+          "maxAttempts": 2
+        },
+        "priority": 1,
+        "defaultValueSpec": {
+          "defaultValueList": []
+        },
+        "name": "Name"
+      }
+    ],
+    "followUpPrompt": {
+      "prompt": {
+        "messages": [
+          {
+            "groupNumber": 1,
+            "contentType": "PlainText",
+            "content": "Hi {Name}! Before we proceed, can you answer some questions so I can help you better?"
+          }
+        ],
+        "maxAttempts": 3
+      },
+      "rejectionStatement": {
+        "messages": [
+          {
+            "groupNumber": 1,
+            "contentType": "PlainText",
+            "content": "Ok. Thank you. Have a great day!"
+          }
+        ]
+      }
+    },
+    "slotTypes": []
+  }
+}

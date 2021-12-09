@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "TopicVisa",
+    "version": "3",
+    "fulfillmentActivity": {
+      "type": "ReturnIntent"
+    },
+    "sampleUtterances": [
+      "I need some information on student visa",
+      "student visa",
+      "can you help me with student visa info",
+      "visa",
+      "i am looking for some information on student visa"
+    ],
+    "slots": [],
+    "dialogCodeHook": {
+      "uri": "arn:aws:lambda:us-east-1:314927161395:function:visaInfo",
+      "messageVersion": "1.0"
+    },
+    "slotTypes": []
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "StudentDetails",
+    "version": "11",
+    "fulfillmentActivity": {
+      "codeHook": {
+        "uri": "arn:aws:lambda:us-east-1:314927161395:function:storeStudentDetails",
+        "messageVersion": "1.0"
+      },
+      "type": "CodeHook"
+    },
+    "sampleUtterances": [
+      "yes",
+      "absolutely",
+      "fine",
+      "sure"
+    ],
+    "slots": [
+      {
+        "sampleUtterances": [],
+        "slotType": "NameOfDepartment",
+        "slotTypeVersion": "1",
+        "obfuscationSetting": "NONE",
+        "slotConstraint": "Required",
+        "valueElicitationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "What department are you applying to?"
+            }
+          ],
+          "maxAttempts": 2
+        },
+        "priority": 3,
+        "name": "departmentName"
+      },
+      {
+        "sampleUtterances": [],
+        "slotType": "GradOrUndergrad",
+        "slotTypeVersion": "1",
+        "obfuscationSetting": "NONE",
+        "slotConstraint": "Required",
+        "valueElicitationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Are you a grad or undergrad student?"
+            }
+          ],
+          "maxAttempts": 2
+        },
+        "priority": 2,
+        "name": "gradOrUndergrad"
+      },
+      {
+        "sampleUtterances": [],
+        "slotType": "QuarterName",
+        "slotTypeVersion": "1",
+        "obfuscationSetting": "NONE",
+        "slotConstraint": "Required",
+        "valueElicitationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Which quarter are you planning?"
+            }
+          ],
+          "maxAttempts": 2
+        },
+        "priority": 4,
+        "name": "quarter"
+      }
+    ],
+    "conclusionStatement": {
+      "messages": [
+        {
+          "groupNumber": 1,
+          "contentType": "PlainText",
+          "content": "Thank you for providing me with the information. Shall we proceed?"
+        },
+        {
+          "groupNumber": 1,
+          "contentType": "PlainText",
+          "content": "Thank you for providing me with the information. Would you like to continue?"
+        }
+      ]
+    },
+    "slotTypes": [
+      {
+        "name": "NameOfDepartment",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "cs"
+          },
+          {
+            "value": "computer science and engineering"
+          },
+          {
+            "value": "cse"
+          },
+          {
+            "value": "computer science"
+          }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+      },
+      {
+        "name": "GradOrUndergrad",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "undergrad",
+            "synonyms": [
+              "undergraduate"
+            ]
+          },
+          {
+            "value": "grad",
+            "synonyms": [
+              "graduate"
+            ]
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      },
+      {
+        "name": "QuarterName",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "spring"
+          },
+          {
+            "value": "fall"
+          },
+          {
+            "value": "winter"
+          },
+          {
+            "value": "summer"
+          }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+      }
+    ]
+  }
+}

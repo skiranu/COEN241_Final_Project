@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "TopicCovid",
+    "version": "7",
+    "fulfillmentActivity": {
+      "codeHook": {
+        "uri": "arn:aws:lambda:us-east-1:314927161395:function:covidInfo",
+        "messageVersion": "1.0"
+      },
+      "type": "CodeHook"
+    },
+    "sampleUtterances": [
+      "covid",
+      "covid information",
+      "covid related",
+      "latest covid info",
+      "covid info",
+      "virus",
+      "corona",
+      "coronavirus",
+      "How is SCU handling the corona virus",
+      "I want to view all SCU covid related info",
+      "What are the guidelines for covid"
+    ],
+    "slots": [],
+    "dialogCodeHook": {
+      "uri": "arn:aws:lambda:us-east-1:314927161395:function:covidInfo",
+      "messageVersion": "1.0"
+    },
+    "slotTypes": []
+  }
+}

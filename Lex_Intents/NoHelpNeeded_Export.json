@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "NoHelpNeeded",
+    "version": "2",
+    "fulfillmentActivity": {
+      "type": "ReturnIntent"
+    },
+    "sampleUtterances": [
+      "no",
+      "I don't think so",
+      "nope",
+      "naah",
+      "no thanks"
+    ],
+    "slots": [],
+    "conclusionStatement": {
+      "messages": [
+        {
+          "groupNumber": 1,
+          "contentType": "PlainText",
+          "content": "I'm glad I could help you. Have a great day!"
+        },
+        {
+          "groupNumber": 1,
+          "contentType": "PlainText",
+          "content": "Thank you. Have a great rest of the day!"
+        },
+        {
+          "groupNumber": 1,
+          "contentType": "PlainText",
+          "content": "Have a great day! I'm here to help you anytime."
+        }
+      ]
+    },
+    "slotTypes": []
+  }
+}
