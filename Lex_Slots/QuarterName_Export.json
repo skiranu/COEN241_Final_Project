@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "QuarterName",
+    "version": "2",
+    "enumerationValues": [
+      {
+        "value": "spring",
+        "synonyms": [
+          "spring"
+        ]
+      },
+      {
+        "value": "fall",
+        "synonyms": [
+          "autumn"
+        ]
+      },
+      {
+        "value": "winter",
+        "synonyms": [
+          "winter"
+        ]
+      },
+      {
+        "value": "summer",
+        "synonyms": [
+          "summer"
+        ]
+      }
+    ],
+    "valueSelectionStrategy": "TOP_RESOLUTION"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "GradOrUndergrad",
+    "version": "1",
+    "enumerationValues": [
+      {
+        "value": "undergrad",
+        "synonyms": [
+          "undergraduate"
+        ]
+      },
+      {
+        "value": "grad",
+        "synonyms": [
+          "graduate"
+        ]
+      }
+    ],
+    "valueSelectionStrategy": "TOP_RESOLUTION"
+  }
+}
